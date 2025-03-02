@@ -4,8 +4,6 @@ import (
 	bmap "asciigen/bitmap"
 	"asciigen/readfile"
 	"fmt"
-	_ "image/jpeg"
-	_ "image/png"
 )
 
 func main() {
