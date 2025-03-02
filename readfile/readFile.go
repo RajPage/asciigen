@@ -1,4 +1,4 @@
-package io
+package readfile
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func ReadImageFromPath(path string) (image.Image, error) {
+func FromPath(path string) (image.Image, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		fmt.Println(err)
