@@ -10,6 +10,10 @@ type Bitmap struct {
 	Pixels        [][]color.NRGBA // https://stackoverflow.com/a/54309181
 }
 
+func (b Bitmap) GetPixel(x, y int) color.NRGBA {
+	return b.Pixels[y][x]
+}
+
 func pixel2rgba(pixel color.Color) color.NRGBA {
 	r, g, b, a := pixel.RGBA()
 	if a == 0xffff {
