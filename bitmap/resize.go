@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func (b *Bitmap) Resize(width int) *Bitmap {
+func (b *Bitmap) ResizeByInterpolation(width int) *Bitmap {
 	//Width should be greater than 0 and less than the original width
 	if width <= 0 || width >= b.Width {
 		return b

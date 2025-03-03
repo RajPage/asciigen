@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	filePath := "test.jpg"
+	filePath := "pikachu.jpeg"
 	img, _ := readfile.FromPath(filePath)
 	bitmap := bmap.FromImage(img)
 
@@ -18,7 +18,7 @@ func main() {
 	gray := color.GrayModel.Convert(bitmap.Pixels[0][0])
 	fmt.Println("First pixel value:", gray.(color.Gray).Y)
 
-	resized := bitmap.Resize(50)
+	resized := bitmap.ResizeByInterpolation(80)
 	fmt.Println("Resized bitmap width:", resized.Width)
 	fmt.Println("Resized bitmap height:", resized.Height)
 
