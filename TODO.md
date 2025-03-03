@@ -6,10 +6,8 @@ Project Description
 
 ### Todo
 
+- [ ] Make pixel clusters  
 - [ ] Get ASCII char for each pixel cluster  
-- [ ] Get ASCII char for each pixel  
-- [ ] Get Brightness of each pixel  
-- [ ] Convert file to grayscale  
 - [ ] Get cli flag for clustering  
 - [ ] Get cli flag for color/grayscale  
 - [ ] Get file path from cli args  
@@ -19,4 +17,6 @@ Project Description
 
 ### Done ✓
 
+- [x] Get ASCII char for each pixel  
+- [x] Convert file to grayscale  
 

@@ -5,11 +5,6 @@ import (
 	"image/color"
 )
 
-type Bitmap struct {
-	Width, Height int
-	Pixels        [][]color.NRGBA // https://stackoverflow.com/a/54309181
-}
-
 func (b Bitmap) GetPixel(x, y int) color.NRGBA {
 	return b.Pixels[y][x]
 }
