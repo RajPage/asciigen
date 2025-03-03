@@ -5,13 +5,7 @@ import (
 )
 
 func pixelToGrayScale(pixel color.NRGBA) color.Gray {
-	// https://en.wikipedia.org/wiki/Relative_luminance
-	// Luminance Y = 0.2126 R + 0.7152 G + 0.0722 B
-	// Approxiamtion for speed:
-	// Y = 0.375 R + 0.5 G + 0.125 B
-	// Y = (R + R + R + B + G + G + G + G) / 8
-	y := (pixel.R + pixel.R + pixel.R + pixel.B + pixel.G + pixel.G + pixel.G + pixel.G) >> 3
-	return color.Gray{uint8(y)}
+	return color.GrayModel.Convert(pixel).(color.Gray)
 }
 
 func (bitmap Bitmap) ToGrayscale() [][]color.Gray {
