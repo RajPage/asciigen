@@ -11,6 +11,8 @@ Project Description
 - [ ] Get cli flag for clustering  
 - [ ] Get cli flag for color/grayscale  
 - [ ] Get file path from cli args  
+- [ ] Get flags for terminal line spacing
+- [ ] Better ASCII for light mode
 
 ### In Progress
 
