@@ -32,7 +32,7 @@ func main() {
 	for y := 0; y < len(asciiArt); y++ {
 		for x := 0; x < len(asciiArt[y]); x++ {
 			fmt.Printf("%c", asciiArt[y][x])
-			// TODO: Add Support for color output in ascii art
+			// TODO(#5): Add Support for color output in ascii art
 			// This might be helpful https://github.com/fatih/color?tab=readme-ov-file#rgb-colors
 			// fmt.Printf("%c%c", asciiArt[y][x], asciiArt[y][x])
 		}
