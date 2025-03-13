@@ -5,6 +5,8 @@ import (
 )
 
 func pixelToGrayScale(pixel color.NRGBA) color.Gray {
+	// TODO(#3): Add support for light mode
+	// This can be achieved with inverted grayscale
 	return color.GrayModel.Convert(pixel).(color.Gray)
 }
 
