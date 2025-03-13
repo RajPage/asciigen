@@ -9,7 +9,8 @@ import (
 )
 
 func main() {
-	filePath := "pikachu.jpeg"
+	// TODO: Handle Flag inputs
+	filePath := "raj.jpg"
 	img, _ := readfile.FromPath(filePath)
 	bitmap := bmap.FromImage(img)
 
@@ -18,7 +19,8 @@ func main() {
 	gray := color.GrayModel.Convert(bitmap.Pixels[0][0])
 	fmt.Println("First pixel value:", gray.(color.Gray).Y)
 
-	resized := bitmap.ResizeByInterpolation(75)
+	// resized := bitmap.ResizeByInterpolation(100)
+	resized := bitmap
 	fmt.Println("Resized bitmap width:", resized.Width)
 	fmt.Println("Resized bitmap height:", resized.Height)
 
@@ -29,9 +31,10 @@ func main() {
 	asciiArt := ascii.GetAsciiArt(grayBMap)
 	for y := 0; y < len(asciiArt); y++ {
 		for x := 0; x < len(asciiArt[y]); x++ {
-			// fmt.Printf("%c", asciiArt[y][x])
-			fmt.Printf("%c%c", asciiArt[y][x], asciiArt[y][x])
+			fmt.Printf("%c", asciiArt[y][x])
+			// fmt.Printf("%c%c", asciiArt[y][x], asciiArt[y][x])
 		}
 		fmt.Println()
 	}
+	// TODO: Add Support for color output in ascii art
 }
