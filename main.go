@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	// TODO: Handle Flag inputs
+	// TODO(#4): Handle Flag inputs
 	filePath := "raj.jpg"
 	img, _ := readfile.FromPath(filePath)
 	bitmap := bmap.FromImage(img)
@@ -32,9 +32,10 @@ func main() {
 	for y := 0; y < len(asciiArt); y++ {
 		for x := 0; x < len(asciiArt[y]); x++ {
 			fmt.Printf("%c", asciiArt[y][x])
+			// TODO: Add Support for color output in ascii art
+			// This might be helpful https://github.com/fatih/color?tab=readme-ov-file#rgb-colors
 			// fmt.Printf("%c%c", asciiArt[y][x], asciiArt[y][x])
 		}
 		fmt.Println()
 	}
-	// TODO: Add Support for color output in ascii art
 }
