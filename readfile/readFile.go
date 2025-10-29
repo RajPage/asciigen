@@ -11,17 +11,18 @@ import (
 func FromPath(path string) (image.Image, error) {
 	file, err := os.Open(path)
 	if err != nil {
-		fmt.Println(err)
-		return nil, err
+		return nil, fmt.Errorf("failed to open file %s: %w", path, err)
 	}
 	defer file.Close()
+
 	file.Seek(0, 0)
-	img, _, err := image.Decode(file)
+	img, format, err := image.Decode(file)
 	if err != nil {
-		fmt.Println("error:", err)
-		return nil, err
+		return nil, fmt.Errorf("failed to decode image %s: %w", path, err)
 	}
+
+	// Optional: log the detected format for debugging
+	_ = format
+
 	return img, nil
 }
-
-// ReadImageFromUrl
